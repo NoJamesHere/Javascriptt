@@ -1,23 +1,38 @@
-#maindiv{
-    min-width: 500px;
-    min-height:500px;
-    background-color:#ffc8dd;
-    max-width:500px;
+#maindiv {
+    min-width: 300px;           /* smaller min-width for phones */
+    max-width: 500px;           /* keep max at 500px for desktops */
+    width: 90%;                 /* flexible width, adapts to screen */
+    min-height: 500px;
+    background-color: #ffc8dd;
     text-align: center;
-    font-weight:bold;
-    margin:auto;
-    padding:5px;
-    color:#450920;
-    display: flex;         
-    flex-direction: column; 
-    gap: 2px;  
+    font-weight: bold;
+    margin: 2rem auto 0 auto;   /* shorthand margin, top and auto horizontal */
+    padding: 5px;
+    color: #450920;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    margin-top:2rem;
     border-radius: 10px;
-    transition: border-color 0.4s ease, box-shadow 0.4s ease, transform 0.4s ease, margin-top 0.4s ease;
-    transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1); 
-    will-change:transform, box-shadow;
-    overflow:hidden;
+    transition:
+        border-color 0.4s ease,
+        box-shadow 0.4s ease,
+        transform 0.4s ease,
+        margin-top 0.4s ease;
+    transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
+    will-change: transform, box-shadow;
+    overflow: hidden;
+}
+
+#maindiv:hover {
+    box-shadow: 0 0 15px #ffafcc, 0 0 30px #cdb4db;
+    transition:
+        box-shadow 0.3s ease-in-out,
+        transform 0.3s ease-in-out,
+        margin-top 0.3s ease-in-out;
+    transform: scale(1.08);
+    margin-top: 3rem;
+    transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 #strongert {
@@ -25,66 +40,64 @@
     color: #3b061a;
     text-shadow: 0 0 5px #3b061a, 0 0 10px #cdb4db;
     transition: color 0.3s ease, text-shadow 0.3s ease;
-    
 }
 
 #strongert:hover {
     color: #c74b78;
     text-shadow: 0 0 10px #730b33, 0 0 20px #cdb4db;
 }
-#maindiv ul{
-    text-align:left;
+
+#maindiv ul {
+    text-align: left;
 }
 
 body {
-    font-family:Arial, Helvetica, sans-serif;
-    background-color:#cdb4db;
-    cursor:default;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #cdb4db;
+    cursor: default;
 }
 
 h1 {
-    font-family:fantasy;
-    font-weight:bolder;
+    font-family: fantasy;
+    font-weight: bolder;
     margin: 1rem 0;
 }
 
-hr{
-    border-width:0px;
-    height:3px;
-    background-color:#ffafcc;
+hr {
+    border-width: 0px;
+    height: 3px;
+    background-color: #ffafcc;
     border: 1px solid #d090a8;
-    border-radius:5px;
+    border-radius: 5px;
     margin: 2rem 50px;
 }
 
-p{
-    max-width:250px;
-    font-size:large;
+p {
+    max-width: 250px;
+    font-size: large;
     margin: 0 auto;
-    text-align:center;
+    text-align: center;
 }
 
-ul{
-    margin-top:50px;
+ul {
+    margin-top: 50px;
     padding-left: 1.5rem;
     list-style: none;
-    
 }
 
 ul li {
     margin-bottom: 8px;
     text-shadow: 0 0 4px #450920, 0 0 8px #3b061a;
-
 }
 
 ul li::before {
-  content: "•";
-  color: #3b061a;
-  text-shadow: 2px 2px 6px rgba(255, 5, 30, 0.6);
-  font-size: 1.2em;
-  display: inline-block;
-  width: 1em;
-  margin-left: -1em;
+    content: "•";
+    color: #3b061a;
+    text-shadow: 2px 2px 6px rgba(255, 5, 30, 0.6);
+    font-size: 1.2em;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
 }
 
 ul li:hover {
@@ -92,13 +105,30 @@ ul li:hover {
     transition: text-shadow 0.3s ease;
 }
 
-#maindiv:hover {
-    box-shadow: 0 0 15px #ffafcc, 0 0 30px #cdb4db;
-    transition: box-shadow 0.3s ease-in-out,
-                transform 0.3s ease-in-out,
-                margin-top 0.3s ease-in-out;
-    transform: scale(1.08);
-    margin-top: 3rem;
-    transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1); /* move this here */
+/* ===== Mobile responsiveness ===== */
+@media (max-width: 600px) {
+    #maindiv {
+        min-height: auto;    /* Let it shrink if needed */
+        padding: 15px;       /* Give more breathing room */
+        width: 95%;          /* almost full width on phones */
+        min-width: auto;     /* remove min-width on small screens */
+    }
 
+    p {
+        max-width: 100%;     /* fit screen width */
+        font-size: 1rem;     /* maybe smaller on phones */
+    }
+
+    hr {
+        margin: 1.5rem 20px; /* reduce side margin on small screens */
+    }
+
+    h1 {
+        font-size: 1.8rem;   /* scale down header on phones */
+    }
+
+    ul {
+        margin-top: 30px;
+        padding-left: 1rem;
+    }
 }
