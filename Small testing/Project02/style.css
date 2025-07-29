@@ -8,16 +8,28 @@
     margin:auto;
     padding:5px;
     color:#450920;
-    display: flex;         /* or use grid */
-    flex-direction: column; /* or row */
+    display: flex;         
+    flex-direction: column; 
     gap: 2px;  
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     margin-top:2rem;
     border-radius: 10px;
-    transition: border-color 0.4s ease, box-shadow 0.4s ease;
+    transition: border-color 0.4s ease, box-shadow 0.4s ease, transform 0.4s ease, margin-top 0.4s ease;
 
 }
 
+#strongert {
+    font-weight: bolder;
+    color: #3b061a;
+    text-shadow: 0 0 5px #3b061a, 0 0 10px #cdb4db;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    
+}
+
+#strongert:hover {
+    color: #c74b78;
+    text-shadow: 0 0 10px #730b33, 0 0 20px #cdb4db;
+}
 #maindiv ul{
     text-align:left;
 }
@@ -79,5 +91,9 @@ ul li:hover {
 
 #maindiv:hover {
     box-shadow: 0 0 15px #ffafcc, 0 0 30px #cdb4db;
-    transition: box-shadow 0.3s ease-in-out;
+    transition: box-shadow 0.3s ease-in-out,
+                transform 0.3s ease-in-out,
+                margin-top 0.3s ease-in-out;
+    transform: scale(1.2);
+    margin-top:5rem;
 }
