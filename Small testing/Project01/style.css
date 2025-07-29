@@ -15,6 +15,8 @@ body {
     padding:5px;
     border-radius:2%;
     box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 1;
 }
 
 button{
@@ -81,3 +83,29 @@ hr {
     max-width:50px;
     margin-top: 30px;
 }
+
+.Circle{
+    width: 100px;
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 50%;
+    display: inline-block;
+    margin-top: 20px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0);
+    border: 2px solid #e7c0ff00;
+    position:absolute;
+    top: 0px;
+    left: 0px;
+    transition: 
+        border 0.5s ease-in-out,
+        top 1s ease-in-out,
+        left 1s ease-in-out,
+        box-shadow 0.5s ease-in-out;
+    z-index: 0;
+}
+
+.Circle.animatecircle {
+    border: 2px solid #e7c0ff;
+    box-shadow: 0px 0px 8px rgba(239, 196, 255, 0.388);
+}
+
