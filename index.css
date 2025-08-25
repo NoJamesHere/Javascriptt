@@ -7,6 +7,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 main {
@@ -75,6 +76,7 @@ p {
     width: 100%;
     max-width: 900px;
     margin: 0 auto 32px auto;
+    box-sizing: border-box; /* Add this */
 }
 
 .card {
@@ -139,6 +141,34 @@ footer a:hover {
     text-underline-offset: 3px;
     text-decoration-thickness: 1.5px;
 
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 16px 32px 0 0;
+    background: transparent;
+}
+
+#lang-select {
+    font-size: 1rem;
+    padding: 8px 36px 8px 16px;
+    border-radius: 24px;
+    border: 1.5px solid #3498db;
+    background: #fff url("data:image/svg+xml,%3Csvg width='16' height='16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 6l4 4 4-4' stroke='%233498db' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat right 12px center/18px 18px;
+    color: #2c3e50;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 8px rgba(52, 152, 219, 0.08);
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+    appearance: none;
+}
+
+#lang-select:hover, #lang-select:focus {
+    border-color: #217dbb;
+    box-shadow: 0 4px 16px rgba(52, 152, 219, 0.18);
 }
 
 @media (max-width: 600px) {

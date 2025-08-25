@@ -10,30 +10,38 @@
     <link rel="icon" type="image/x-icon" href="favicon.png">
 </head>
 <body>
+    <header>
+        <select id="lang-select">
+            <option value="en">English</option>
+            <option value="de">Deutsch</option>
+            <option value="ru">Русский</option>
+        </select>
+    </header>
     <main>
-        <h1>Welcome to my small web projects!</h1>
-        <p>Here you can find some of my small web projects I made to learn more about web development!</p>
+        <h1 id="main-title">Welcome to my small web projects!</h1>
+        <p id="main-desc">Here you can find some of my small web projects I made to learn more about web development!</p>
         <section class="projects">
             <div class="card">
-                <a href="Small%20testing/Project01/index.html" target="_blank">Project 1</a>
-                <p class="desc">A simple page with some javascript animations.</p>
+                <a href="Small%20testing/Project01/index.html" target="_blank" id="proj1-link">Project 1</a>
+                <p class="desc" id="proj1-desc">A simple page with some javascript animations.</p>
             </div>
             <div class="card">
-                <a href="Small%20testing/Project02/index.html" target="_blank">Project 2</a>
-                <p class="desc">About me page.</p>
+                <a href="Small%20testing/Project02/index.html" target="_blank" id="proj2-link">Project 2</a>
+                <p class="desc" id="proj2-desc">About me page.</p>
             </div>
             <div class="card">
-                <a href="Small%20testing/Project03/index.html" target="_blank">Project 3</a>
-                <p class="desc">Some button designs.</p>
+                <a href="Small%20testing/Project03/index.html" target="_blank" id="proj3-link">Project 3</a>
+                <p class="desc" id="proj3-desc">Some button designs.</p>
             </div>
             <div class="card">
-                <a href="Small%20testing/Project04/index.html" target="_blank">Project 4</a>
-                <p class="desc">A javascript game inspired by the infamous "snake" game.</p>
+                <a href="Small%20testing/Project04/index.html" target="_blank" id="proj4-link">Project 4</a>
+                <p class="desc" id="proj4-desc">A javascript game inspired by the infamous "snake" game.</p>
             </div>
         </section>
     </main>
     <footer>
-        <p>&copy; 2025 NoJamesHere &mdash; <a href="https://github.com/NoJamesHere" target="_blank">GitHub</a></p>
+        <p id="footer-text">&copy; 2025 NoJamesHere &mdash; <a href="https://github.com/NoJamesHere" target="_blank" id="github-link">GitHub</a></p>
     </footer>
+    <script src="lang.js"></script>
 </body>
 </html>
