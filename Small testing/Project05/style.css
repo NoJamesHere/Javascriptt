@@ -43,7 +43,7 @@ html {
 }
 
 
-ul{
+.navbar{
     display:flex;
     width:100%;
     height:50px;
@@ -55,7 +55,7 @@ ul{
     align-items: center;
 }
 
-ul:hover{
+.navbar:hover{
     box-shadow: #6c6ea0 0px 3px 5px;
 
 }
@@ -126,21 +126,87 @@ ul:hover{
   box-shadow: rgb(52, 36, 55) 1px 3px 10px;
 }
 
-/*Maintance*/
+/* idk! */
 
 h1{
-    margin-top:225px;
+    margin-top:50px;
     text-align:center;
-    font-size:100px;
+    font-size:75px;
     color:#6c6ea0;
     cursor:default;
 }
 
 p{
     text-align:center;
-    margin-top: 10px;
-    font-size:40px;
+    margin-top: 5px;
+    font-size:25px;
     color:#515492;
     font-weight: bolder;
     cursor:default;
+}
+
+hr{
+    margin-top:20px;
+    height:3px;
+    background-color:#b5b6d4;
+    border: none;
+    box-shadow:3px 3px 5px #514e57, 0 0 10px #bd9ffd;
+}
+
+h2{
+    margin-top:10px;
+    text-align:center;
+    font-size:30px;
+    color:#6c6ea0;
+    cursor:default;
+}
+
+.contains ul{
+    color:#515492;
+    margin-left:10px;
+    font-weight:bold;
+    list-style:none;
+}
+
+.contains li{
+    margin-bottom: 8px;
+
+}
+
+.contains li::before{
+    content: "•";
+}
+
+.containsdiv {
+    border-radius:5px;
+    margin:15px auto;
+    width:300px;
+    height:200px;
+    background-color:#cecfe8;
+    animation: containsdivv 5s ease infinite;
+    transition:
+        border-color 0.4s ease,
+        box-shadow 0.4s ease,
+        transform 0.4s ease,
+        margin-top 0.4s ease;
+    transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
+    will-change: transform, box-shadow;
+}
+
+@keyframes containsdivv {
+  0%   { box-shadow:#4a4069 7px 7px 25px; transform: scale(1.02) }
+  50%  { box-shadow:#a9a1c2 5px 5px 30px; transform: scale(1)}
+  100% { box-shadow:#4a4069 7px 7px 25px; transform:scale(1.02)}
+}
+
+.containsdiv:hover {
+    transition:
+        box-shadow 0.3s ease-in-out,
+        transform 0.3s ease-in-out,
+        margin-top 0.3s ease-in-out;
+    transform: scale(1.08);
+    margin-top: 1rem;
+    transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
+    animation-play-state: paused;  /* freezes animation at current frame */
+    box-shadow:#000000 0px 0px 40px; 
 }
