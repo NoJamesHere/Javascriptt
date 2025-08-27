@@ -22,9 +22,33 @@
             </ul>
             
         </section>
-
-        <h1>Coming soon.</h1>
-        <p>Check again later!</p>
+        <section id="top">
+        <h1>ASCII Pattern Generator.</h1>
+        <p id="subtext">Pyramids, Diamonds? Yes.</p>
+        </section>
+        <select id="length-select">
+            
+        </select>
+        <select id="char-select">
+            <option value="*">*</option>
+            <option value="#">#</option>
+            <option value="/">/</option>
+            <option value="@">@</option>
+            <option value="+">+</option>
+            <option value="=">=</option>
+            <option value="■">■</option>
+            <option value="◆">◆</option>
+            <option value="✦">✦</option>
+            <option value="✪">✪</option>
+        </select>
+        <button id="generate" class="generate">generate</button>
+        <button id="copyToClip" class="copyToClip">Copy</button>
+        <div id="patterncont">
+            <pre id="patterntext">pattern goes here</pre>
+        </div>
         <!-- Script soure here -->
+
+        <script src="patterngen.js"></script>
     </body>
 </html>
+
