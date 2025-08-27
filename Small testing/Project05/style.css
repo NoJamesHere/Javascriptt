@@ -10,7 +10,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     line-height: 1.5;
-    background-color: #eae9ff; /* white background by default */
+    background-color: #c6c3fa; /* white background by default */
     color: #000; /* default text color */
 }
 
@@ -47,8 +47,8 @@ html {
     display:flex;
     width:100%;
     height:50px;
-    background-color:rgb(208, 207, 255);
-    box-shadow: #515492 0px 1px 5px;
+    background-color:rgb(138, 137, 199);
+    box-shadow: #303257 0px 1px 5px;
     transition:box-shadow 0.5s ease;
     overflow:hidden;
     padding:0;
@@ -56,7 +56,7 @@ html {
 }
 
 .navbar:hover{
-    box-shadow: #6c6ea0 0px 3px 5px;
+    box-shadow: #303257 0px 3px 5px;
 
 }
 
@@ -121,7 +121,7 @@ html {
   left: 0px;
   width: 100%;
   height: 4px;
-  background-color: #8588c3;
+  background-color: #53557c;
   border-radius: 15px;
   box-shadow: rgb(52, 36, 55) 1px 3px 10px;
 }
@@ -148,7 +148,7 @@ p{
 hr{
     margin-top:20px;
     height:3px;
-    background-color:#b5b6d4;
+    background-color:#7f84ff;
     border: none;
     box-shadow:3px 3px 5px #514e57, 0 0 10px #bd9ffd;
 }
@@ -162,27 +162,32 @@ h2{
 }
 
 .contains ul{
-    color:#515492;
+    
+    text-shadow: #240e2d80 1px 1px 5px;
+    color:#484c87;
     margin-left:10px;
     font-weight:bold;
     list-style:none;
 }
 
 .contains li{
-    margin-bottom: 8px;
+    
+    margin-bottom: 50px;
 
 }
 
 .contains li::before{
+    text-shadow:none;
     content: "•";
 }
 
 .containsdiv {
+    padding-top:10px;
     border-radius:5px;
     margin:15px auto;
     width:300px;
     height:200px;
-    background-color:#cecfe8;
+    background-color:#9f90d0;
     animation: containsdivv 5s ease infinite;
     transition:
         border-color 0.4s ease,

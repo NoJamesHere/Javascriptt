@@ -129,9 +129,9 @@ ul:hover{
 /*Maintance*/
 
 h1{
-    margin-top:225px;
+    margin-top:25px;
     text-align:center;
-    font-size:100px;
+    font-size:50px;
     color:#6c6ea0;
     cursor:default;
 }
@@ -143,4 +143,69 @@ p{
     color:#515492;
     font-weight: bolder;
     cursor:default;
+}
+
+#ballsdiv{
+    margin:auto;
+    background-color:#504f6a;
+    width:50%;
+    max-width: 1000px;
+    height:500px; /* help*/
+    position:relative;
+    overflow:hidden;
+
+    user-select: none;   /* disable text selection */
+    -webkit-user-select: none; /* Safari/Chrome */
+    -moz-user-select: none;    /* Firefox */
+    -ms-user-select: none;     /* IE/Edge */
+
+}
+
+.ball{
+    border-radius:50%;
+}
+#below {
+    background-color:#cac9d6;
+    display: flex;              /* enable flexbox */
+    justify-content: center;    /* horizontal centering */
+    align-items: center;        /* vertical centering */
+    width: 50%;
+    height: 100px;              /* give some height */
+    margin: 5px auto auto auto;
+    box-shadow:#8588c3 2px 2px 5px;
+}
+
+#clear {
+    width: 100px;
+    height: 50px;
+    padding: 10px 20px;
+    background-color: #6863b7;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bolder;
+    transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+    transition:
+        box-shadow 0.3s ease-in-out,
+        transform 0.3s ease-in-out,
+        transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+
+    /* remove position absolute unless you need it */
+}
+
+#clear:hover{
+    transform:scale(1.05);
+    box-shadow: 0 0 15px #6863b7, 0 0 30px #cdb4db;
+    transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.subtext{
+    margin:10px auto 10px auto;
+    max-width:50%;
+    font-size:20px;
+}
+
+.strong{
+    text-shadow: #7a6d82 1px 1px 2px;
 }
