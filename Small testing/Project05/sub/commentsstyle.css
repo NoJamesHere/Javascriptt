@@ -10,7 +10,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     line-height: 1.5;
-    background-color: #eae9ff; /* white background by default */
+    background-color: #c6c3fa; /* white background by default */
     color: #000; /* default text color */
 }
 
@@ -43,20 +43,20 @@ html {
 }
 
 
-ul{
+.navbar{
     display:flex;
     width:100%;
     height:50px;
-    background-color:rgb(208, 207, 255);
-    box-shadow: #515492 0px 1px 5px;
+    background-color:rgb(138, 137, 199);
+    box-shadow: #303257 0px 1px 5px;
     transition:box-shadow 0.5s ease;
     overflow:hidden;
     padding:0;
     align-items: center;
 }
 
-ul:hover{
-    box-shadow: #6c6ea0 0px 3px 5px;
+.navbar:hover{
+    box-shadow: #303257 0px 3px 5px;
 
 }
 
@@ -121,7 +121,7 @@ ul:hover{
   left: 0px;
   width: 100%;
   height: 4px;
-  background-color: #8588c3;
+  background-color: #53557c;
   border-radius: 15px;
   box-shadow: rgb(52, 36, 55) 1px 3px 10px;
 }
