@@ -1,7 +1,72 @@
 body{
-        font-family:Arial, Helvetica, sans-serif;
+        font-family:"Share Tech Mono", monospace;
+        background-color:aliceblue;
 }
-.background{
-    background-color:antiquewhite;
 
+p{
+  margin-top:50px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+  border-radius: 25px;
+  background: #c5c7ff;
+  position: relative;
+  transition: 0.3s;
+  cursor:pointer;
+}
+
+.slider::before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  background: rgb(255, 255, 255);
+  border-radius: 50%;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  transition: 0.3s;
+}
+
+input:checked + .slider {
+  background: #2c2c4eff;
+}
+
+input:checked + .slider::before {
+  transform: translateX(20px);
+  background:rgb(157, 159, 255);
+}
+
+#background{
+  font-weight:bolder;
+  height:500px;
+  border-radius:25px;
+  padding-top:10px;
+  width:700px;
+  margin:auto;
+  text-align:left;
+  box-shadow: #1e0542 0.5px 0.5px 10px;
+  transition:box-shadow 0.4s ease;
+
+      user-select: none;   /* disable text selection */
+    -webkit-user-select: none; /* Safari/Chrome */
+    -moz-user-select: none;    /* Firefox */
+    -ms-user-select: none;     /* IE/Edge */
+
+
+}
+
+p, h1{
+  margin-left:20px;
+}
+
+#background:hover{
+  cursor:default;
+  box-shadow:#1e0542 0.5px 0.5px 15px;
 }
