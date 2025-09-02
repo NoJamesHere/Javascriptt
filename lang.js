@@ -11,7 +11,9 @@ const translations = {
         proj4Link: "Project 4",
         proj4Desc: "A javascript game inspired by the infamous \"snake\" game.",
         proj5Link: "Project 5",
-        proj5Desc: "I don't know yet!",
+        proj5Desc: "Includes ASCII-pattern generator",
+        proj6Link: "Project 6",
+        proj6Desc: "I don't know yet!",
         footerText: "&copy; 2025 NoJamesHere &mdash; <a href=\"https://github.com/NoJamesHere\" target=\"_blank\" id=\"github-link\">GitHub</a>"
     },
     de: {
@@ -26,7 +28,9 @@ const translations = {
         proj4Link: "Projekt 4",
         proj4Desc: "Ein JavaScript-Spiel inspiriert vom berühmten \"Snake\"-Spiel.",
         proj5Link: "Projekt 5",
-        proj5Desc: "Ich weiß es noch nicht!",
+        proj5Desc: "Enthält einen ASCII-Muster-Generator",
+        proj6Link: "Projekt 6",
+        proj6Desc: "Ich weiß es noch nicht!",
         footerText: "&copy; 2025 NoJamesHere &mdash; <a href=\"https://github.com/NoJamesHere\" target=\"_blank\" id=\"github-link\">GitHub</a>"
     },
     ru: {
@@ -41,7 +45,9 @@ const translations = {
         proj4Link: "Проект 4",
         proj4Desc: "Игра на JavaScript, вдохновленная знаменитой игрой \"Змейка\".",
         proj5Link: "Проект 5",
-        proj5Desc: "Niet!",
+        proj5Desc: "Включает генератор ASCII-шаблонов",
+        proj6Link: "Проект 6",
+        proj6Desc: "Еще не знаю!",
         footerText: "&copy; 2025 NoJamesHere &mdash; <a href=\"https://github.com/NoJamesHere\" target=\"_blank\" id=\"github-link\">GitHub</a>"
     }
 };
@@ -62,7 +68,8 @@ document.getElementById('lang-select').addEventListener('change', function() {
     document.getElementById('proj4-desc').textContent = translations[lang].proj4Desc;
     document.getElementById('proj5-link').textContent = translations[lang].proj5Link;
     document.getElementById('proj5-desc').textContent = translations[lang].proj5Desc;
-    
+    document.getElementById('proj6-link').textContent = translations[lang].proj6Link;
+    document.getElementById('proj6-desc').textContent = translations[lang].proj6Desc;
     // Footer
     document.getElementById('footer-text').innerHTML = translations[lang].footerText;
 });
