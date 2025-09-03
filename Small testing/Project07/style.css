@@ -14,7 +14,8 @@ h1{
     margin-left:auto;
     margin-right:auto;
     background-color:rgb(255, 227, 190);
-    padding:0px 5px;
+    padding:1px 15px;
+    box-sizing: border-box;
 }
 
 
@@ -39,20 +40,89 @@ h1{
 
 #newcontent{
     height:50px;
-    background-color:aquamarine;
+    background-color:rgb(213, 255, 241);
     width: 400px;
     margin: 10px auto 10px auto;
-    border: solid 0.5px rgb(13, 13, 13); 
+    border: none; 
+    font-weight:700;
+    color:#1a1a1a;
+    box-shadow:#051629 0px 0px 3px 1px; 
+    box-sizing:border-box;
+    padding-left:10px;
 }
 
 #newtitle{
-    height:20px;
+    height:25px;
     width:400px;
     margin-bottom:5px;
-    border: solid 0.5px rgb(13, 13, 13); 
+    border: none; 
+    font-weight:900;
+    box-shadow:#1a1a1a 0px 0px 3px 1px;
+    box-sizing:border-box;
+    padding-left:10px;
 }
+
 
 #newposts{
     width:500px;
     height:100px;
+    margin:auto;
+}
+
+::placeholder{
+    font-weight:bolder;    
+}
+
+#colorselect{
+    width:80px;
+    height:40;
+    margin:0px 0px 0px 10px;
+    border-radius: 15px;
+    border:none;
+    color:#1a1a1a;
+    box-shadow: #195153 1px 1px 3px;
+    font-weight:bolder;
+    background-color:rgb(224, 253, 255);
+    padding:5px;
+    transition: 
+    background-color 0.2s ease,
+    color 0.2s ease;
+    cursor:pointer;
+    
+}
+
+#colorselect:hover{
+    background-color: rgb(177, 220, 221);
+    color:rgb(0, 0, 0);
+}
+
+button{
+    width:100px;
+    height:50px;
+    background-color:rgb(214, 255, 190);
+    color:#1a1a1a;
+    font-weight: bolder;
+    border:none;
+    border-radius:15px;
+    cursor:pointer;
+    box-shadow:  rgb(125, 195, 197)20px 20px 50px 0px inset, #101d33 3px 4px 10px;
+    transition: 
+    background-color 0.2s ease,
+    color 0.2s ease,
+    box-shadow 0.2s ease;
+    
+}
+button:hover{
+    background-color:rgb(224, 250, 108);
+    color:#2c2c2c;
+   box-shadow:rgb(125, 195, 197)20px 20px 50px 0px inset, #101d33 3px 4px 10px
+}
+
+#posts-list{
+    margin-top:100px;
+}
+
+.post p{
+    font-weight: 600;
+    color:#1a1a1a;
 }
