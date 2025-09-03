@@ -15,6 +15,8 @@ const translations = {
     proj5Desc: "Includes ASCII-pattern generator",
     proj6Link: "Project 6",
     proj6Desc: "Wanted to test out a dark mode slider",
+    proj7Link: "Project 7",
+    proj7Desc: "A simple posts app where you can add posts with different colors.",
     footerText:
       '&copy; 2025 NoJamesHere &mdash; <a href="https://github.com/NoJamesHere" target="_blank" id="github-link">GitHub</a>',
   },
@@ -34,6 +36,8 @@ const translations = {
     proj5Desc: "Enthält einen ASCII-Muster-Generator",
     proj6Link: "Projekt 6",
     proj6Desc: "Wollte einen Dark-Mode-Slider ausprobieren",
+    proj7Link: "Projekt 7",
+    proj7Desc: "Eine einfache Posts-App, in der du Posts mit verschiedenen Farben hinzufügen kannst.",
     footerText:
       '&copy; 2025 NoJamesHere &mdash; <a href="https://github.com/NoJamesHere" target="_blank" id="github-link">GitHub</a>',
   },
@@ -53,6 +57,8 @@ const translations = {
     proj5Desc: "Включает генератор ASCII-шаблонов",
     proj6Link: "Проект 6",
     proj6Desc: "Хотел протестировать слайдер темного режима",
+    proj7Link: "Проект 7",
+    proj7Desc: "Простое приложение для публикации постов, где вы можете добавлять посты с разными цветами.",
     footerText:
       '&copy; 2025 NoJamesHere &mdash; <a href="https://github.com/NoJamesHere" target="_blank" id="github-link">GitHub</a>',
   },
@@ -90,6 +96,10 @@ document.getElementById("lang-select").addEventListener("change", function () {
     translations[lang].proj6Link;
   document.getElementById("proj6-desc").textContent =
     translations[lang].proj6Desc;
+  document.getElementById("proj7-link").textContent =
+    translations[lang].proj7Link;
+  document.getElementById("proj7-desc").textContent =
+    translations[lang].proj7Desc;
   // Footer
   document.getElementById("footer-text").innerHTML =
     translations[lang].footerText;
