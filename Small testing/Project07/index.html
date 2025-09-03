@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Posts</title>
+    <meta name="description" content="Some posts">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="posts-container">
+        <h1>Posts</h1>
+        <div id="newposts">
+            <input type="text" id="newtitle" placeholder="Title for your new post..">
+            <input type="text" id="newcontent" placeholder="Text for your new post..">
+            <select id="colorselect" name="colors">
+                <option value="#fc3131">Red</option>
+                <option value="#6453ff">Blue</option>
+                <option value="#60ff54">Green</option>
+            </select>
+            <button id="addpost">Add Post</button>
+        </div>
+        <div id="posts-list">
+            <!-- Posts will be loaded here -->
+        </div>
+
+        <script src="script.js"></script>
+</body>
+
+</html>
