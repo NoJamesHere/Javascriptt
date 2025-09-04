@@ -29,10 +29,18 @@ function renderPosts() {
     const postElement = document.createElement("div");
     postElement.classList.add("post");
     postElement.style.backgroundColor = post.color || "#f0f0f0";
-    postElement.innerHTML = `
-            <h2>${post.title}</h2>
-            <p>${post.content}</p>
-        `;
+
+    // Create title element
+    const titleElem = document.createElement("h2");
+    titleElem.textContent = post.title;
+
+    // Create content element
+    const contentElem = document.createElement("p");
+    contentElem.className = "postContent";
+    contentElem.textContent = post.content; // preserves newlines
+
+    postElement.appendChild(titleElem);
+    postElement.appendChild(contentElem);
     container.appendChild(postElement);
   });
 }

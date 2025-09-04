@@ -1,54 +1,82 @@
 body{
     font-family:Arial, Helvetica, sans-serif;
+    background-color: #e1f1ff;
 }
 
 h1{
     font-size:40px;
-    margin:10px auto 20px auto;
+    text-align:center;
+    color:#0b062d;
 }
 
-.post{
-    width:250px;
-    height:250px;
-    margin-top:20px;
-    margin-left:auto;
-    margin-right:auto;
-    background-color:rgb(255, 227, 190);
-    padding:1px 15px;
+.post {
+    width: 250px;
+    min-height: 250px;
+    max-height: 400px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(255, 227, 190);
+    padding: 1px 15px;
     box-sizing: border-box;
+    border-radius: 10px;
+    overflow-wrap: break-word; /* ensures long words wrap */
+    word-break: break-word;    /* ensures long words wrap */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
-
 
 #posts-container{
-    width:700px;
-    background-color:antiquewhite;
+    max-width:800px;
+    min-width:400px;
+    background-color:#c4d6fa; /* Soft white */
     margin:auto;
     padding:5px 0px 20px 10px;
+    border-radius:15px;
+    box-shadow: #051629 0px 0px 3px 1px;
+    margin-bottom:20px;
 }
 
-.postContent{
-    color:#1a1a1a;
-    font-weight:bolder;
-    width:200px;
-    margin:auto;
+.postContent {
+    color: #1a1a1a;
+    font-weight: bolder;
+    width: 100%;
+    margin: 8px 0 0 0;
+    word-break: break-word;    /* ensures long words wrap */
+    white-space: pre-wrap;     /* preserves line breaks and wraps text */
 }
-
 .postTitle{
     color:#0b062d;
     font-size:30px;
 }
 
-#newcontent{
-    height:50px;
-    background-color:rgb(213, 255, 241);
+#newcontent {
+    min-height: 60px;
+    max-height: 140px;
     width: 400px;
-    margin: 10px auto 10px auto;
-    border: none; 
-    font-weight:700;
-    color:#1a1a1a;
-    box-shadow:#051629 0px 0px 3px 1px; 
-    box-sizing:border-box;
-    padding-left:10px;
+    margin: 10px auto;
+    border-radius: 12px;
+    border: 1px solid #d1d5db;
+    background: #f8fafc;
+    padding: 12px 16px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    box-sizing: border-box;
+    resize: none;
+    outline: none;
+    transition: 
+        border-color 0.2s,
+        box-shadow 0.2s,
+        background-color 0.2s;
+}
+
+#newcontent:focus {
+    border-color: #6453ff;
+    box-shadow: 0 0 0 2px #6453ff33;
+    background: #fff;
 }
 
 #newtitle{
@@ -57,11 +85,25 @@ h1{
     margin-bottom:5px;
     border: none; 
     font-weight:900;
-    box-shadow:#1a1a1a 0px 0px 3px 1px;
     box-sizing:border-box;
     padding-left:10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    transition:
+        border-color 0.4s ease,
+        box-shadow 0.4s ease,
+        background-color 0.4s ease;
 }
 
+#newtitle:focus {
+    border-color: #6453ff;
+    box-shadow: 0 0 0 2px #6453ff33;
+    background-color: #fff;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background-color 0.2s ease;
+}
 
 #newposts{
     width:500px;
@@ -96,6 +138,10 @@ h1{
     color:rgb(0, 0, 0);
 }
 
+#colorselect:focus{
+    outline:none;
+}
+
 button{
     width:100px;
     height:50px;
@@ -116,6 +162,25 @@ button:hover{
     background-color:rgb(224, 250, 108);
     color:#2c2c2c;
    box-shadow:rgb(125, 195, 197)20px 20px 50px 0px inset, #101d33 3px 4px 10px
+}
+
+input[type="text"] {
+    border-radius: 12px;
+    border: 1px solid #d1d5db;
+    background: #f8fafc;
+    padding: 12px 16px;
+    font-size: 1rem;
+    transition: 
+        border-color 0.2s,
+        box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    outline: none;
+}
+
+input[type="text"]:focus {
+    border-color: #6453ff;
+    box-shadow: 0 0 0 2px #6453ff33;
+    background: #fff;
 }
 
 #posts-list{
